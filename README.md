@@ -11,7 +11,7 @@ Do we really need 10,000s of Low Earth Orbit (LEO) satellites to meet huge globa
 
 Our open-source [TinyLEO community toolkit](github.com/TinyLEO-toolkit/TinyLEO) implements all features in [1]. This toolkit can be used to synthesize sparse LEO networks on demand and operate the resulting satellite networks. We recommend running this toolkit first to understand how TinyLEO works.
 
-This repository then enables reviewers to reproduce the results reported in the paper[1]. It includes all datasets, figure scripts, and experiment configurations. Each figure folder under `Figures-and-Tables/` contains a standalone `README.md` with instructions for reproducing the corresponding result.
+This repository then enables reviewers to reproduce the results reported in the paper[1]. It includes all datasets, figure scripts, and experiment configurations. Each figure folder under `Experimental-results/` contains a standalone `README.md` with instructions for reproducing the corresponding result.
 
 
 ## Repository structure
@@ -22,7 +22,7 @@ This repository includes the following contents:
         ├── Dataset
         │   ├── Cloudflare-dataset: DNS-based Starlink user activity measurements from Cloudflare.
         │   └── Demand: LEO network demand from Starlink.
-        ├── Figures-and-Tables
+        ├── Experimental-results
         │   ├── figure1
         │   ├── figure14
         │   ├── figure15
@@ -40,15 +40,15 @@ We use two datasets for the empirical study and evaluation (in `TinyLEO-SIGCOMM2
 - **Cloudflare dataset**: The dataset is collected from Cloudflare, including:
 
     - `traffic_data_from_cloudflare_0707/`: DNS-based Starlink user activity measurements over 2 days (2025.07.06-2025.07.07) at 15-minute intervals across cities.
-    - `400w_ip_country_city_250713.csv`: Starlink's active users distribution across cities at 2025.07.13
+    - `400w_ip_country_city_250713.csv`: Starlink's active users distribution across cities at 2025.07.13.
  
 - **LEO network demand dataset**: 
     - `starlink_supply_2025_01_01_99449.npy`: Starlink’s global customer distributions based on its [official report](https://x.com/SpaceX/status/1745941814165815717) and scale it by its total radio access link capacity (652 Tbps from 6,793 satellites avaliable at 2025.01.01) so that every user can gain a 100 Mbps downlink speed.
     - `satellite_demand_backbone_network.npy`: LEO network demand as [Internet backbone](https://global-internet-map-2022.telegeography.com) backup.
  
-## Figures and Tables
+## Experimental Results
 
-In `TinyLEO-SIGCOMM25/Figures-and-Tables/`, we release the traces used in [1]'s figures, including
+In `TinyLEO-SIGCOMM25/Experimental-results/`, we release the traces used in [1]'s figures, including
 - `Figure1`: Small LEO network for enormous demands.
 - `Figure 3`:Starlink’s global user traffic distribution based on Cloudflare’s public measurements.
 - `Figure 4`: LEO network resource waste under mobility.
@@ -61,7 +61,7 @@ In `TinyLEO-SIGCOMM25/Figures-and-Tables/`, we release the traces used in [1]'s 
 
 
 
-Each table/figure has a `README.md` in its corresponding folder that details the experimental methodology and how to run the code.
+Each figure has a `README.md` in its corresponding folder that details the experimental methodology and how to run the code.
 
 ## Dependencies
 
